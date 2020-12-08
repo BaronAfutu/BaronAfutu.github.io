@@ -1,0 +1,14 @@
+form{
+    font-size: 25px;
+}
+
+form input[type='number']{
+    width: 30%;
+}
+form input[type='text']{
+    width: 55%;
+}
+
+form input{
+    font-size: 25px;
+}

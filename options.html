@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="options1.css">
+    <script src="items.js"></script>
+    <script src="cookieManage.js"></script>
+    <script src="db1.js"></script>
+    <script src="options1.js"></script>
+    <title>Bclouds Hardware</title>
+</head>
+<body>
+    <!--ADD A NEW ITEM-->
+    <section id="addNew" style='display: none;'>
+        Add new item
+        <form action="#" onsubmit="return addItem(this)" method="POST">
+            <p>Item Name &nbsp; &nbsp;
+            <input type="text" name="itemName" id="itemName" required></p>
+            <div>
+                SubItem(s) 
+                <input type="button" onclick="return addField(this)" value="Add"/>
+                <p hidden><input type="text" name="subItem" value="Hidden">&nbsp;:&nbsp;<input type="number" name="price" placeholder="Price"></p>
+                <p><input type="text" name="subItem" value="Price">&nbsp;:&nbsp;<input type="number" name="price" placeholder="Price" required></p>  
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!--ADD A SUB ITEM-->
+    <section id="addSub" style='display: none;'>
+        Add sub item
+    </section>
+
+    <!--CHANGE ITEM PRICE-->
+    <section id="changePrice" style='display: none;'>
+        change item price
+    </section>
+</body>
+</html>

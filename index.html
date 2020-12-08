@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main1.css">
+    <script src="items.js"></script>
+    <script src="cookieManage.js"></script>
+    <script src="db1.js"></script>
+    <script src="main1.js"></script>
+    <title>Bclouds Hardware Price List</title>
+</head>
+
+
+
+<body>
+    <!--PRICE LISTING-->
+    <section class="modal">
+    <div id="priceListing" class="priceListing animate">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeTheForm(this)">&times;</a>
+            <div class="item" style="font-size: 25px;height: 40px;">
+                Item1
+            </div>
+            <hr> 
+            <div class="subItem" style="font-size: 26px;height: auto;">
+                SubItems
+            </div>
+            <hr>
+            <div class="options" style="font-size: 26px; height: auto;">
+                <a href="javascript:void(0)"><b>Change Price</b></a>
+                <a href="javascript:void(0)"><b>Add Item</b></a>
+            </div>
+    </div>
+    <div>
+        <div style="width: 100%; height: 100%;top:0px;bottom:0px; font-size: 100px; color: rgba(100, 100, 100, 0);" onclick="closeTheForm(this)">
+        x<br>
+        x<br>
+        x<br>
+    </div> 
+    </div>
+    
+    </section>
+    <!--End of Explanded Card-->
+    
+    <!--SEARCH BAR WITH REGEX-->
+    <div class = "search">
+        <!--&nbsp;&nbsp; -->
+        <input type="text" name="searchText" id="searchText" placeholder="Type Item Name" minlength="60" onkeyup="listItems(this)"/>
+        <!--&nbsp;&nbsp;<button>OK</button-->
+        <div name='list' id='list'>
+        </div>
+    </section>
+    
+    <!--End of Search Bar-->
+    
+    <div id="main">
+
+        <!--ITEM NAME GALLERY VIEW-->
+        <section name="view" style="display: none;">
+            <div name="card" class="card">
+                <div class="item">
+                    Item
+                </div>
+                <hr>
+                <div class="subItem">
+                   SubItems
+                </div>
+                <hr>
+                <div class="options">
+                    Options Will Appear
+                </div>
+            </div>
+        </section>
+        <!--End of View-->
+    </div>
+    <a id="addItem" class="add" href="options.html?add=">
+        +
+    </a>
+</body>
+</html>
