@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main1.css">
+    
     <script src="items.js"></script>
     <script src="cookieManage.js"></script>
     <script src="db1.js"></script>
@@ -43,13 +44,13 @@
     <!--End of Explanded Card-->
     
     <!--SEARCH BAR WITH REGEX-->
-    <div class = "search">
+    <div class="searchBar" id="searchBar">
         <!--&nbsp;&nbsp; -->
-        <input type="text" name="searchText" id="searchText" placeholder="Type Item Name" minlength="60" onkeyup="listItems(this)"/>
+        <input type="text" name="searchText" id="searchText" placeholder="Type Item Name" minlength="60" onkeyup="listCards(this)"/>
         <!--&nbsp;&nbsp;<button>OK</button-->
         <div name='list' id='list'>
         </div>
-    </section>
+    </div>
     
     <!--End of Search Bar-->
     
@@ -73,7 +74,10 @@
         </section>
         <!--End of View-->
     </div>
-    <a id="addItem" class="add" href="options.html?add=">
+    <a href="javascript:void(0)" id="searchBtn" class="button search" onclick="showSearch()">
+        Q
+    </a>
+<a href="options.html?add=" id="addItem" class="button add" onclick="return function(){window.onbeforeunload = null)}();">
         +
     </a>
 </body>

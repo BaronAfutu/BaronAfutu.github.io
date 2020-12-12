@@ -5,8 +5,16 @@ function initAll(){
         readItems();
     }//LOADING ITEMS
     
-    fillGallery();//fill block choice will be dependent on cookie
-   //pageNumbers();
+    fillGallery();
+   window.onbeforeunload = function(){
+       return "";
+   };
+   
+}
+
+var dont = ()=>{
+    //alert("Hello");
+    return false?"helo":null;
 }
 
 var fillGallery = ()=>{
@@ -89,4 +97,33 @@ var listItems = (search)=>{
             list.innerHTML+='<span onclick = showPrice2('+index+')>'+item.name+'</span><br>'
         }
     })
+}
+
+var listCards = (search)=>{
+    // Declare variables
+    
+    var input = search.value.toUpperCase();
+    cards = document.getElementsByName('card');
+    
+    
+    var name = '';
+
+    
+    for(var i=0,end=cards.length;i<end;i++){
+        name = cards[i].getElementsByTagName('div')[0].innerHTML;
+        if(name.toUpperCase().indexOf(input)>-1){
+            cards[i].style.display = 'block';
+        }
+
+        else{
+            cards[i].style.display = 'none';
+        }
+    }
+}
+
+var showSearch = ()=>{
+    var cont = document.getElementById('searchBar');
+    cont.style.display = 'block';
+    window.location.replace('#searchBar')
+    cont.getElementsByTagName('input')[0].focus();
 }
