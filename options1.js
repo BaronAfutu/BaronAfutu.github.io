@@ -3,6 +3,9 @@ const N_OF_ITEMS = 100;
 
 function initAll(){
     setupPage();
+    if(cookieVal('set0')!=0 && cookieVal('set0')!=''){
+        readItems();
+    }
 }
 
 var setupPage = ()=>{
