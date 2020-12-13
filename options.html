@@ -13,28 +13,56 @@
 <body>
     <!--ADD A NEW ITEM-->
     <section id="addNew" style='display: none;'>
-        Add new item
+        <h1 style="text-align: center;">Add new item</h1>
         <form action="#" onsubmit="return addItem(this)" method="POST">
             <p>Item Name &nbsp; &nbsp;
-            <input type="text" name="itemName" id="itemName" required></p>
+                <input type="text" name="itemName" id="itemName" required>
+            </p>
             <div>
                 SubItem(s) 
                 <input type="button" onclick="return addField(this)" value="Add"/>
-                <p hidden><input type="text" name="subItem" value="Hidden">&nbsp;:&nbsp;<input type="number" name="price" placeholder="Price"></p>
-                <p><input type="text" name="subItem" value="Price">&nbsp;:&nbsp;<input type="number" name="price" placeholder="Price" required></p>  
+                <!--Hidden input fields make sure price and subitem are always arrays-->
+                <p hidden>
+                    <input type="text" name="subItem" value="Hidden">&nbsp;:&nbsp;
+                    <input type="number" name="price" placeholder="Price">
+                </p>
+                <p>
+                    <input type="text" name="subItem" value="Price">&nbsp;:&nbsp;
+                    <input type="number" name="price" placeholder="Price" step="0.1" required>
+                </p>  
             </div>
             <input type="submit" value="Submit">
-        </form>
-    </section>
+            <div name='message' id='message'><!--Message-->
 
-    <!--ADD A SUB ITEM-->
-    <section id="addSub" style='display: none;'>
-        Add sub item
+            </div>
+        </form>
     </section>
 
     <!--CHANGE ITEM PRICE-->
     <section id="changePrice" style='display: none;'>
-        change item price
+        <h1>Change Item Price</h1>
+
+        <form action="#" onsubmit="return changeDetails(this)" method="POST" name="changePrice">
+            <p>Item Name &nbsp; &nbsp;
+                <input type="text" name="itemName" id="itemName" required>
+                <input type="number" name="itemN" id="itemN" required hidden>
+            </p>
+            <div name='subFields'>
+                SubItem(s) 
+                <input type="button" onclick="return addField(this)" value="Add"/>
+                <!--Hidden input fields make sure price and subitem are always arrays-->
+                <p hidden>
+                    <input type="text" name="subItem" value="Hidden">&nbsp;:&nbsp;
+                    <input type="number" name="price" placeholder="Price">
+                </p>
+                 
+            </div>
+            <input type="submit" value="Submit">
+            <div name='message' id='message'><!--Message-->
+
+            </div>
+        </form>
     </section>
+
 </body>
 </html>

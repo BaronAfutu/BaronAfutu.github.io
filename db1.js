@@ -1,5 +1,4 @@
 var store = ()=>{
-    var start = 0;
     var ips = 10; //itemsPerSet
     var end = (ITEMS.length>ips)?ips:ITEMS.length;
     var ckCt = 0;
@@ -15,8 +14,6 @@ var store = ()=>{
 
 var readItems = ()=>{
     ITEMS = [];
-    //console.log(ITEMS.length);
-
     var i=0;
     do {
         val = cookieVal(('set'+i+''));
@@ -24,7 +21,5 @@ var readItems = ()=>{
         ITEMS = ITEMS.concat(JSON.parse(val))
         i++;
     } while (val!=0);
-    
-    //document.write(JSON.stringify(ITEMS))
 }
 

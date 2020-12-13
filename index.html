@@ -28,8 +28,7 @@
             </div>
             <hr>
             <div class="options" style="font-size: 26px; height: auto;">
-                <a href="javascript:void(0)"><b>Change Price</b></a>
-                <a href="javascript:void(0)"><b>Add Item</b></a>
+                <a href="javascript:void(0)"><b>Change Details</b></a>
             </div>
     </div>
     <div>
@@ -45,17 +44,13 @@
     
     <!--SEARCH BAR WITH REGEX-->
     <div class="searchBar" id="searchBar">
-        <!--&nbsp;&nbsp; -->
         <input type="text" name="searchText" id="searchText" placeholder="Type Item Name" minlength="60" onkeyup="listCards(this)"/>
-        <!--&nbsp;&nbsp;<button>OK</button-->
         <div name='list' id='list'>
         </div>
     </div>
-    
     <!--End of Search Bar-->
     
     <div id="main">
-
         <!--ITEM NAME GALLERY VIEW-->
         <section name="view" style="display: none;">
             <div name="card" class="card">
@@ -75,7 +70,7 @@
         <!--End of View-->
     </div>
     <a href="javascript:void(0)" id="searchBtn" class="button search" onclick="showSearch()">
-        Q
+        <img src="search.png" width="30px" alt=""/>
     </a>
 <a href="options.html?add=" id="addItem" class="button add" onclick="window.onbeforeunload = null;">
         +
